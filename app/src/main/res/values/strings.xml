@@ -3,5 +3,12 @@
 
     <string name="app_name">Watchit</string>
     <string name="hello_world">Hello world!</string>
-
+	<string name="title">Movie Title!</string>
+	<string name="rating">Rating</string>
+	<string name="plot">Plot Synopsis</string>
+	<string name="release">Release Date</string>
+	<string name="dialog_rating">Sort by fame</string>
+	<string name="dialog_popular">Sort by fortune</string>
+	<string name="dialog_title">Choose Sort Method</string>
+	
 </resources>
