@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+		<ScrollView
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+				
 <LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical"
 	android:id="@+id/detail_layout">
+
+	<CheckBox
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Favorite"
+		android:id="@+id/detail_favorite"/>
 
 	<LinearLayout
 		android:layout_height="wrap_content"
@@ -50,11 +60,30 @@
 				android:layout_width="wrap_content"
 				android:text="@string/plot"
 				android:id="@+id/detail_plot"/>
-			
-			
+
 		</LinearLayout>
 
 	</LinearLayout>
 
+	<FrameLayout
+		android:id="@+id/youtube_fragment"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:visibility="visible"/>
+
+	<GridView
+		android:layout_width="match_parent"
+		android:layout_height="1000dp"
+		android:columnWidth="250dp"
+		android:numColumns="1"
+		android:verticalSpacing="10dp"
+		android:horizontalSpacing="10dp"
+		android:stretchMode="columnWidth"
+		android:gravity="center"
+		android:id="@+id/perk_gridview">
+
+	</GridView>
 
 </LinearLayout>
+		</ScrollView>

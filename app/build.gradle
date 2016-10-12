@@ -20,6 +20,9 @@ android {
 }
 
 dependencies {
+	compile 'com.android.support:support-v4:+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 	compile 'com.squareup.picasso:picasso:2.5.2'
-}
+	compile 'com.google.apis:google-api-services-youtube:v3-rev176-1.22.0'
+
+	}

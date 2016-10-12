@@ -8,7 +8,8 @@
 	<string name="plot">Plot Synopsis</string>
 	<string name="release">Release Date</string>
 	<string name="dialog_rating">Sort by fame</string>
-	<string name="dialog_popular">Sort by fortune</string>
-	<string name="dialog_title">Choose Sort Method</string>
+		<string name="dialog_popular">Sort by fortune</string>
+		<string name="dialog_title">Choose Sort Method</string>
+		<string name="dialog_favorite">Show Favorite Movies</string>
 	
 </resources>
