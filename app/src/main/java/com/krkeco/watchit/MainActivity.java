@@ -24,8 +24,9 @@ import android.support.v4.app.FragmentTransaction;
 
 public class MainActivity extends FragmentActivity
 {
-		public static String apiKey = "";
-		public static String youTubeAPI = "";
+		//if you are going to try the app yourself change the keys to your keys 
+		public static String apiKey = "";//tmdb api key
+		public static String youTubeAPI = "";//youtube api key
 		
 		public static boolean mTwoPane =  false;
 		public static final String PREF_PLOT = "plot";
@@ -43,7 +44,7 @@ public class MainActivity extends FragmentActivity
 				"No Movies yet, please wait or check your internet connection!",
 		};
 
-		public static String[] gridImgURL = new String[] { 
+		public static String[] gridImgURL = new String[] { //this is a dummy image
 				"http://i.imgur.com/DvpvklR.png", 
 		};
 
@@ -164,11 +165,11 @@ public class MainActivity extends FragmentActivity
 				if(mTwoPane == false){
 				main = (FrameLayout) findViewById(R.id.det_container);
 				main.removeViewAt(0);
-				gridview = new GridView(this);//(GridView) findViewById(R.id.gridview);
+				gridview = new GridView(this);
 						
 				}else{
 					main = (FrameLayout) findViewById(R.id.main_detail_container);
-						gridview = (GridView) findViewById(R.id.gridview);//(GridView) findViewById(R.id.gridview);
+						gridview = (GridView) findViewById(R.id.gridview);
 						
 				}
 				
@@ -230,10 +231,8 @@ public class MainActivity extends FragmentActivity
 		@Override
 		public void onBackPressed()
 		{
-				
 			//	refreshMovies();
 				updateGridView();
-				// TODO: Implement this method
 				super.onBackPressed();
 		}
 		
@@ -261,7 +260,7 @@ public class MainActivity extends FragmentActivity
 								}
 								catch (JSONException e)
 								{
-										Log.e("akrkeco",e.getMessage()+"... epical failure retrieving JSON");
+										Log.e("akrkeco",e.getMessage()+"... failure retrieving JSON");
 										e.printStackTrace();
 										return null;
 								}
@@ -273,7 +272,7 @@ public class MainActivity extends FragmentActivity
 								}
 								catch (JSONException e)
 								{
-										Log.e("akrkeco",e.getMessage()+"... epical failure retrieving JSON");
+										Log.e("akrkeco",e.getMessage()+"... failure retrieving JSON");
 										e.printStackTrace();
 										return null;
 								}
@@ -404,6 +403,7 @@ public class MainActivity extends FragmentActivity
 				private String[] getMovieData(String[] movieJsonString)
 				throws JSONException{
 
+						//keys are from api documentation and should not be altered
 						final String key_title = "original_title";
 						final String key_plot= "overview";
 						final String key_imgurl= "poster_path";
@@ -467,6 +467,7 @@ public class MainActivity extends FragmentActivity
 		private String[] getMovieDataFromJSON(String movieJsonString)
 		throws JSONException{
 
+				//keys are from api documentation and should not be altered
 				final String key_title = "original_title";
 				final String key_plot= "overview";
 				final String key_imgurl= "poster_path";
@@ -530,7 +531,7 @@ public class MainActivity extends FragmentActivity
 		}
 
 
-		public void organize(){
+		public void organize(){//toggle view  favorites / popular
 
 				AlertDialog.Builder b = new AlertDialog.Builder(this);
 				b.setTitle(getResources().getString(R.string.dialog_title));
